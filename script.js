@@ -39,10 +39,27 @@ function createClothe() {
         author: username
     }
 
-    console.log(clotheObject)
-
     const promise = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', clotheObject)
-    promise.then(alert('Encomenda enviada!'))
-    promise.catch(alert('Ops, não conseguimos processar sua encomenda'))
+    promise.then(() => {
+        alert('Encomenda enviada!')
+        getClothes()
+    })
+    promise.catch(() => alert('Ops, não conseguimos processar sua encomenda'))
 }
 
+function getClothes() {
+    const promise = axios.get('https://mock-api.driven.com.br/api/v4/shirts-api/shirts')
+    promise.then(res => {
+        document.querySelector('.shirts-cards').innerHTML = ''
+
+        for(let i = 0; i < res.data.length; i++) {
+            document.querySelector('.shirts-cards').innerHTML += `
+                <div class="shirt">
+                    <img src="${res.data[i].image}" alt="clothe">
+                    <h2><strong>Criador: </strong>${res.data[i].owner}</h2>
+                </div>
+            `
+        }
+    })
+}
+getClothes()

@@ -132,9 +132,6 @@ main {
     border-radius: 10px;
     font-size: 20px;
     color: #b5b5b5;
-    /* color: #FCFCFC;
-    background-color: #C4C4C4;
-    cursor: pointer; */
 }
 
 .last-shirts {
@@ -176,4 +173,5 @@ main {
     width: 180px;
     height: 180px;
     margin-bottom: 10px;
+    object-fit: cover;
 }
