@@ -54,7 +54,7 @@ function getClothes() {
 
         for(let i = 0; i < res.data.length; i++) {
             document.querySelector('.shirts-cards').innerHTML += `
-                <div class="shirt">
+                <div class="shirt" onclick="sendClothe('${res.data[i].model}', '${res.data[i].neck}', '${res.data[i].material}', '${res.data[i].owner}')">
                     <img src="${res.data[i].image}" alt="clothe">
                     <h2><strong>Criador: </strong>${res.data[i].owner}</h2>
                 </div>
@@ -63,3 +63,19 @@ function getClothes() {
     })
 }
 getClothes()
+
+function sendClothe(model, neck, material, owner) {
+    const encodedText = `Olá, gostaria de encomendar essa blusa: 
+- Modelo: ${model}
+- Gola: ${neck}
+- Material: ${material}
+- Criador: ${owner}
+
+Pedido feito por: ${username}
+    `
+
+    if(confirm("Deseja encomendar essa blusa?") === true) {
+        const readyMessage = `https://wa.me/5518997157418?text=${encodeURIComponent(encodedText)}`
+        window.open(readyMessage)
+    }
+}

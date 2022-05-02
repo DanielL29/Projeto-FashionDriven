@@ -144,7 +144,6 @@ main {
 }
 
 .last-shirts h1 {
-    align-self: flex-start;
     font-size: 24px;
     padding-top: 30px;
     margin-bottom: 15px;
@@ -167,6 +166,7 @@ main {
     border-radius: 10px;
     margin-right: 15px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .shirt img {
@@ -174,4 +174,57 @@ main {
     height: 180px;
     margin-bottom: 10px;
     object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+    header img {
+        width: 250px;
+        margin-left: 30px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .models {
+        width: 100%;
+    }
+
+    .shirts-cards {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .last-shirts {
+        height: auto;
+        padding-bottom: 31px;
+    }
+
+    .shirt {
+        margin-bottom: 15px;
+    }
+
+    .content {
+        height: auto;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .cards, .shirt-image, .t-shirts, .collars, .tissues {
+        width: 90%;
+    }
+
+    .shirt-image input {
+        width: 90%;
+    }
+
+    .shirt-image button {
+        width: 93%;
+    }
+
+    .last-shirts > div {
+        margin: 0 20px;
+    }
 }
