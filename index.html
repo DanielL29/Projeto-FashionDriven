@@ -22,44 +22,44 @@
             <div class="models">
                 <div class="t-shirts">
                     <h1>Escolha o modelo</h1>
-                    <div class="cards">
+                    <div class="cards tshirt">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.tshirt')">
                                 <img src="images/tshirt.png" alt="tshirt">
                             </div>
                             <p>T-shirt</p>
                         </div>
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.tshirt')">
                                 <img src="images/Camiseta.png" alt="tshirt">
                             </div>
                             <p>Camiseta</p>
                         </div>
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.tshirt')">
                                 <img src="images/Mangalonga.png" alt="tshirt">
                             </div>
                             <p>Manga longa</p>
                         </div>
                     </div>
                 </div>
-                <div class="collar">
+                <div class="collars">
                     <h1>Escolha a gola</h1>
-                    <div class="cards">
+                    <div class="cards collar">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.collar')">
                                 <img src="images/GolaV.png" alt="collar">
                             </div>
                             <p>Gola V</p>
                         </div>
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.collar')">
                                 <img src="images/GolaRedonda.png" alt="collar">
                             </div>
                             <p>Gola Redonda</p>
                         </div>
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.collar')">
                                 <img src="images/GolaPolo.png" alt="collar">
                             </div>
                             <p>Gola Polo</p>
@@ -68,21 +68,21 @@
                 </div>
                 <div class="tissues">
                     <h1>Escolha o tecido</h1>
-                    <div class="cards">
+                    <div class="cards tissue">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.tissue')">
                                 <img src="images/Seda.png" alt="tissues">
                             </div>
                             <p>Seda</p>
                         </div>
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.tissue')">
                                 <img src="images/Algodão.png" alt="tissues">
                             </div>
                             <p>Algodão</p>
                         </div>
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" onclick="selectClothe(this, '.tissue')">
                                 <img src="images/Poliester.png" alt="tissues">
                             </div>
                             <p>Poliester</p>
@@ -92,7 +92,7 @@
                 <div class="shirt-image">
                     <h1>Imagem de referência</h1>
                     <input type="text" placeholder="Insira o link">
-                    <button>Confirmar Pedido</button>
+                    <button onclick="createClothe()">Confirmar Pedido</button>
                 </div>
             </div>
             <div class="banner">
