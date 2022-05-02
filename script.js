@@ -43,6 +43,9 @@ function createClothe() {
     promise.then(() => {
         alert('Encomenda enviada!')
         getClothes()
+        document.querySelectorAll('.selected').forEach(item => item.classList.remove('selected'))
+        document.querySelector('.shirt-image > input').value = ''
+        clotheObject = {}
     })
     promise.catch(() => alert('Ops, não conseguimos processar sua encomenda'))
 }
