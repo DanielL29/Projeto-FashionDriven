@@ -128,11 +128,13 @@ main {
     height: 40px;
     outline: none;
     border: none;  
-    background-color: #C4C4C4;
+    background-color: #8b8a8a;
     border-radius: 10px;
     font-size: 20px;
-    color: #FCFCFC;
-    cursor: pointer;
+    color: #b5b5b5;
+    /* color: #FCFCFC;
+    background-color: #C4C4C4;
+    cursor: pointer; */
 }
 
 .last-shirts {
